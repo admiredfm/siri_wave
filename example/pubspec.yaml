@@ -3,7 +3,7 @@ description: siri_wave demo
 publish_to: none
 
 environment:
-  sdk: ^3.5.0
+  sdk: '>=3.4.4 <4.0.0'
 
 dependencies:
   flutter:
@@ -12,11 +12,6 @@ dependencies:
   siri_wave:
     path: ../
 
-dev_dependencies:
-  lints:
-    git:
-      url: https://github.com/halildurmus/workflows.git
-      path: packages/lints
 
 flutter:
   uses-material-design: true

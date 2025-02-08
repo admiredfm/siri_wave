@@ -30,22 +30,10 @@ class IOS7SiriWaveformState extends State<IOS7SiriWaveform>
       // the duration value does not impact the animation in any way.
       duration: const Duration(seconds: 1),
     );
-    final IOS7SiriWaveformController(:amplitude, :speed) = widget.controller;
-    if (amplitude > 0 && speed > 0) _animationController.repeat();
+    _animationController.repeat();
     super.initState();
   }
 
-  @override
-  void didUpdateWidget(covariant IOS7SiriWaveform oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    final isAnimating = _animationController.isAnimating;
-    final IOS7SiriWaveformController(:amplitude, :speed) = widget.controller;
-    if (isAnimating && (amplitude == 0 || speed == 0)) {
-      _animationController.stop(canceled: false);
-    } else if (!isAnimating && (amplitude > 0 && speed > 0)) {
-      _animationController.repeat();
-    }
-  }
 
   @override
   void dispose() {

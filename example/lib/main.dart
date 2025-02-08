@@ -51,6 +51,7 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Spacer(),
+              Text("Amplitude:${amplitude}"),
               CustomSlider(
                 onChanged: (value) {
                   controller.amplitude = value;
@@ -59,6 +60,7 @@ class _HomePageState extends State<HomePage> {
                 label: 'Amplitude',
                 value: amplitude,
               ),
+              Text("Speed:${speed}"),
               CustomSlider(
                 onChanged: (value) {
                   controller.speed = value;
@@ -108,6 +110,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ] else ...[
+                Text("frequency:${frequency}"),
                 FrequencySlider(
                   onChanged: (value) {
                     (controller as IOS7SiriWaveformController).frequency =
